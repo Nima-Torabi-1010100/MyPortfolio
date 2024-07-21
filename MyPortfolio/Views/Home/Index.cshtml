@@ -1,8 +1,61 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model List<Portfolio>
+@{
+    ViewData["Title"] = "My Main Page";
+}
+@section SEO
+{
+    <meta name="Keywords" content="Project, Site, Personal Web Project" />
+    <meta name="description" content="Home page." />
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+@section Banner
+{
+    <section id="banner" class="major">
+        <div class="inner">
+            <span class="image">
+                <a href="~/images/pic01jpg">
+                    <img src="~/images/pic01.jpg" alt="Image description for pic01.jpg" />
+                </a>
+            </span>
+            <header class="major">
+                <h1><span style="color: orangered">Hi</span>, I'm Nima</h1>
+            </header>
+            <div class="content">
+                <p>
+                    @ViewBag.headingText
+                </p>
+                <ul class="actions">
+                    <li><a asp-controller="Home" asp-action="Projects" class="button next scrolly">Projects</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+}
+
+<!-- One -->
+<section id="one" class="tiles">
+    @foreach (Portfolio portfolio in Model)
+    {
+        <article>
+            <span class="image">
+                <a href="~/images/@portfolio.Image">
+                    <img src="~/images/@portfolio.Image" alt="Image description for @portfolio.Image" />
+                </a>
+            </span>
+            <header class="major">
+                <h3><a asp-controller="Home" asp-action="Projects" class="link">@portfolio.Title</a></h3>
+                <p>@portfolio.Description</p>
+            </header>
+        </article>
+    }
+</section>
+
+<!-- Two -->
+<section id="two">
+    <div class="inner">
+        <header class="major">
+            <h2>About me</h2>
+        </header>
+        <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
+    </div>
+</section>

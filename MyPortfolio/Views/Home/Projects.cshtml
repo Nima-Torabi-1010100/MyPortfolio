@@ -1,0 +1,62 @@
+﻿@model List<Portfolio>
+@{
+    ViewData["Title"] = "Projects";
+}
+@section SEO
+{
+    <meta name="Keywords" content="Projects" />
+    <meta name="description" content="Projects Page." />
+}
+
+@section Banner
+{
+    <section id="banner" class="style2">
+        <div class="inner">
+            <span class="image">
+                <img src="images/pic07.jpg" alt="" />
+            </span>
+            <header class="major">
+                <h1>Projects Page</h1>
+            </header>
+            <div class="content">
+                <p>
+                    Lorem ipsum dolor sit amet nullam consequat<br />
+                    sed veroeros. tempus adipiscing nulla.
+                </p>
+            </div>
+        </div>
+    </section>
+}
+
+<!-- One -->
+<section id="one">
+    <div class="inner">
+        <header class="major">
+            <h2>Sed amet aliquam</h2>
+        </header>
+        <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna.</p>
+    </div>
+</section>
+
+<!-- Two -->
+<section id="two" class="spotlights">
+    @foreach (Portfolio project in Model)
+    {
+        <section>
+            <a href="generic.html" class="image">
+                <img src="~/images/@project.Image" alt="" data-position="center center" />
+            </a>
+            <div class="content">
+                <div class="inner">
+                    <header class="major">
+                        <h3>@project.Title</h3>
+                    </header>
+                    <p>@project.Description</p>
+                    <ul class="actions">
+                        <li><a href="generic.html" class="button">Learn more</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    }
+</section>
