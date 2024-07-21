@@ -1,15 +1,17 @@
 ﻿namespace MyPortfolio.Models
 {
-    public class Portfolio
+    public class Project
     {
         public long Id { get; set; }
         public string Title { get; set; }
+        public string Description { get; set; }
         public string Image { get; set; }
 
-        public Portfolio(long id, string title, string image)
+        public Project(long id, string title, string description, string image)
         {
             Id = id;
             Title = title;
+            Description = description;
             Image = image;
         }
     }

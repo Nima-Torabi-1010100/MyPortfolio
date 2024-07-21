@@ -1,4 +1,4 @@
-﻿namespace MyPortFolio.Models
+﻿namespace MyPortfolio.Models
 {
     public class Contact
     {

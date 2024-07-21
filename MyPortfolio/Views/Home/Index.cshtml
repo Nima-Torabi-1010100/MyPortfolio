@@ -1,5 +1,4 @@
-﻿@model List<Portfolio>
-@{
+﻿@{
     ViewData["Title"] = "My Main Page";
 }
 @section SEO
@@ -31,24 +30,8 @@
         </div>
     </section>
 }
-
 <!-- One -->
-<section id="one" class="tiles">
-    @foreach (Portfolio portfolio in Model)
-    {
-        <article>
-            <span class="image">
-                <a href="~/images/@portfolio.Image">
-                    <img src="~/images/@portfolio.Image" alt="Image description for @portfolio.Image" />
-                </a>
-            </span>
-            <header class="major">
-                <h3><a asp-controller="Home" asp-action="Projects" class="link">@portfolio.Title</a></h3>
-                <p>@portfolio.Description</p>
-            </header>
-        </article>
-    }
-</section>
+@await Component.InvokeAsync("Portfolios")
 
 <!-- Two -->
 <section id="two">

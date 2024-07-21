@@ -1,0 +1,17 @@
+﻿@model List<MyPortfolio.Models.Portfolio>
+
+<section id="one" class="tiles">
+    @foreach (Portfolio portfolio in Model)
+    {
+        <article>
+            <span class="image">
+                <a href="~/images/@portfolio.Image">
+                    <img src="~/images/@portfolio.Image" alt="Image description for @portfolio.Image" />
+                </a>
+            </span>
+            <header class="major">
+                <h3><a asp-controller="Home" asp-action="Projects" class="link">@portfolio.Title</a></h3>
+            </header>
+        </article>
+    }
+</section>
