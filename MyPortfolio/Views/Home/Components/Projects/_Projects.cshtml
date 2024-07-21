@@ -1,5 +1,22 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model List<MyPortfolio.Models.Project>
+<section id="two" class="spotlights">
+    @foreach (Project project in Model)
+    {
+        <section>
+            <a href="generic.html" class="image">
+                <img src="~/images/@project.Image" alt="" data-position="center center" />
+            </a>
+            <div class="content">
+                <div class="inner">
+                    <header class="major">
+                        <h3>@project.Title</h3>
+                    </header>
+                    <p>@project.Description</p>
+                    <ul class="actions">
+                        <li><a href="generic.html" class="button">Learn more</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    }
+</section>
