@@ -1,0 +1,12 @@
+﻿<nav id="menu">
+    <ul class="links">
+        @*  <li><a href="@Url.Action("Index","Home")">Home</a></li>
+        <li><a href="@Url.Action("Projects","Home")">Projects</a></li> *@
+        <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+        <li><a asp-controller="Home" asp-action="Projects">Projects</a></li>
+    </ul>
+    <ul class="actions stacked">
+        <li><a href="#" class="button primary fit">Get Started</a></li>
+        <li><a href="#" class="button fit">Log In</a></li>
+    </ul>
+</nav>
