@@ -1,25 +1,26 @@
-﻿<section id="contact">
+﻿@model MyPortfolio.Models.Contact
+<section id="contact">
     <div class="inner">
         <section>
             <form method="post" action="#">
                 <div class="fields">
                     <div class="field half">
-                        <label for="name">Name</label>
-                        <input type="text" name="name" id="name" />
+                        <label asp-for="Name">Name</label>
+                        <input type="text" asp-for="Name" />
                     </div>
                     <div class="field half">
-                        <label for="email">Email</label>
-                        <input type="text" name="email" id="email" />
+                        <label asp-for="Email">Email</label>
+                        <input type="text" asp-for="Email" />
                     </div>
                     <div class="field">
                         <label>Service</label>
-                        <select class="custom-select">
+                        <select class="custom-select" asp-for="Service" asp-items="Model.Services">
                             <option value="0" selected="selected">Please Select The Desired Service...</option>
                         </select>
                     </div>
                     <div class="field">
-                        <label for="message">Message</label>
-                        <textarea name="message" id="message" rows="6"></textarea>
+                        <label asp-for="Message">Message</label>
+                        <textarea asp-for="Message" rows="6"></textarea>
                     </div>
                 </div>
                 <ul class="actions">

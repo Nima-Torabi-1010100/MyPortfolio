@@ -9,11 +9,18 @@ namespace MyPortFolio.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
+        [HttpGet]
         public IActionResult Index()
         {
             ViewData["headingText"] = "I'm trying to be a programmer.";
             ViewBag.headingText = "I'm trying to be a programmer.";
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Index(Contact model)
+        {
+            return Json(Ok());
         }
 
         public IActionResult Projects()
