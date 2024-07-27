@@ -30,10 +30,10 @@
                     </div>
                     <div class="field">
                         <label>Service</label>
-                        <select class="custom-select" asp-for="Service" asp-items="Model.Services">
-                            <option value="10" selected="selected" class="invalid-feedback">Please Select The Desired Service...</option>
+                        <select class="custom-select" asp-for="Service">
+                            <option value="0" selected="selected" class="invalid-feedback">Please Select The Desired Service...</option>
+                            <span asp-validation-for="Service"></span>
                         </select>
-                        <span asp-validation-for="Service"></span>
                     </div>
                     <div class="field">
                         <label asp-for="Message" class="invalid-feedback">Message</label>

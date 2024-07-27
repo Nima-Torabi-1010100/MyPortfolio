@@ -12,7 +12,7 @@ namespace MyPortfolio.Models
         [Required(ErrorMessage = "This field is required.")]
         [EmailAddress(ErrorMessage = "Incorrect Format!")]
         public string Email { get; set; }
-        [Range(1,4,ErrorMessage = "This field is required.")]
+        [Required(ErrorMessage = "This field is required.")]
         public int Service { get; set; }
         [Required(ErrorMessage = "This field is required.")]
         public string Message { get; set; }
