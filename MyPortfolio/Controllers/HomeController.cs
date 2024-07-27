@@ -18,6 +18,17 @@ namespace MyPortFolio.Controllers
         }
 
         [HttpPost]
+        public IActionResult Index(Contact model)
+        {
+            if (!ModelState.IsValid)
+            {
+                ViewBag.error = "The entered information is not correct, Please try again";
+                return View(model);
+            }
+            ViewBag.success = "Thank you! Your message has been successfully sent.";
+            return View();
+
+        }
         //public IActionResult Index(Contact model)
         //{
         //    return Json(Ok());

@@ -2,6 +2,20 @@
 <section id="contact">
     <div class="inner">
         <section>
+            <div>
+                @if (!string.IsNullOrWhiteSpace(ViewBag.error))
+                {
+                    <div class="alert-danger">
+                        @ViewBag.error
+                    </div>
+                }
+                @if (!string.IsNullOrWhiteSpace(ViewBag.success))
+                {
+                    <div class="alert-success">
+                        @ViewBag.success
+                    </div>
+                }
+            </div>
             <form method="post" action="#">
                 <div class="fields">
                     <div class="field half">
