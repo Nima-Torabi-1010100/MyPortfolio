@@ -23,7 +23,7 @@
         </div>
 
         @*Contact*@
-        @await Html.PartialAsync("_ContactForm")
+        <partial name="_ContactForm" />
 
         @*Footer*@
         <partial name="_Footer" />
@@ -36,7 +36,7 @@
     <script src="~/js/breakpoints.min.js"></script>
     <script src="~/js/util.js"></script>
     <script src="~/js/main.js"></script>
-@*     <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    @*     <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script> *@
     @RenderSection("Scripts", required: false)
 </body>
