@@ -18,10 +18,10 @@ namespace MyPortFolio.Controllers
         }
 
         [HttpPost]
-        public IActionResult Index(Contact model)
-        {
-            return Json(Ok());
-        }
+        //public IActionResult Index(Contact model)
+        //{
+        //    return Json(Ok());
+        //}
 
         public IActionResult Projects()
         {
